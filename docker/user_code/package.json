@@ -1,13 +1,13 @@
 {
-  "name": "docker_init_nodejs",
+  "name": "docker_web_app",
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "Mikael Morvan <mikael.morvan@zetapush.com>",
-  "main": "shell.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node shell.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "shelljs": "^0.8.1"
+    "zetapush-js": "^3.2.0-alpha.5"
   }
 }
