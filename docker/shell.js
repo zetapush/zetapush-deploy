@@ -11,7 +11,10 @@ var hostname = shell.cat("/etc/hostname")
 shell.echo("Hostname " + hostname)
 var machineName = shell.env['sandboxId'] + '_' + hostname
 shell.echo("machineName " + machineName)
+var pm2Public = shell.env['pm2Public']
+var pm2Secret = shell.env['pm2Secret']
+shell.echo("pm2 keys ", pm2Secret, pm2Secret)
 
 // Cleanup
 shell.cd("user_code")
-shell.exec('pm2-docker start server.js --public s2b6dxpyd8ioa2a --secret yozkh1u1whvmknz --machine-name ' + machineName)
+shell.exec('pm2-docker start server.js --public ' + pm2Public + ' --secret ' + pm2Secret + ' --machine-name ' + machineName)

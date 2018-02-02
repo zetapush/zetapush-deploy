@@ -22,12 +22,22 @@ A docker image is built from a custom NodeJs-ZetaPush image and the user's sourc
 
 ```console
 docker build .
-Successfully built d327464aabce
+Successfully built YOUR_DOCKER_IMAGE_ID
 ```
+Create a docker env file like "docker-run.env"
+
+```
+# Your ZetaPush Sandbox Id
+sandboxId=XXXXXX
+# Your PM2 credentials
+pm2Public=XXXXXX
+pm2Private=XXXXXX
+```
+
 
 To launch the newly created docker image, just launch
 ```console
-docker container run -e "sandboxId=XXXXXXX" -it d327464aabce
+docker container run --env-file docker-run.env -it YOUR_DOCKER_IMAGE_ID
 ```
 
 

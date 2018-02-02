@@ -1,10 +1,7 @@
 FROM keymetrics/pm2:latest-alpine
 
 # Create app directory
-RUN mkdir -p /usr/src/app
-RUN chown node:node /usr/src/app
 WORKDIR /usr/src/app
-USER node
 
 # Install shell dependencies
 COPY package.json .
