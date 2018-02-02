@@ -6,22 +6,22 @@ We want to allow the developer to easily host his code (on our servers or not)
 # Kubernetes
 
 Kubernetes seems to be a good candidate
-Simple installation
-single load increase
-used by many actors (Microsoft, Google,...)
+* Simple installation
+* single load increase
+* used by many actors (Microsoft, Google,...)
 
-Principle (to be validated)
+# Principle (to be validated)
 
-Deployment of the developer's source code
+## Deployment of the developer's source code
 The developer deploys its source code on a Git (owned by ZetaPush?)
 
 ## Build a Docker image
 A docker image is built from a custom NodeJs-ZetaPush image and the user's source code.
 
-Deployment of the Docker image on a registry
+## Deployment of the Docker image on a registry
 The docker image is deployed on a private registry (or not????)
 
-Deployment of the Docker image from the registry
+## Deployment of the Docker image from the registry
 The image docker is launched as a service in a Kubernetes cluster
 
 # Steps
